@@ -1,0 +1,585 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p{
+    font-size: 12px;
+    color: grey;
+}
+
+header img{
+    background-size: cover;
+    width: 100%;
+    opacity: 0.7;
+}
+
+header::before {
+    position:absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: url(images/overlay-pattern.png) #000000;
+
+}
+
+header {
+    position: relative;
+}
+
+
+.navbar{
+    position:sticky;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    opacity: 9;
+    z-index: 4;
+    height: 90%;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: white;
+
+  }
+.navbar img {
+      width: 125px;
+  }
+  
+  #nav{
+    display: flex;
+    justify-content: right;
+    list-style: none;
+    margin-right: 15%;
+  }
+  
+  #toggle{
+    opacity: 0;
+}
+#apri-menu{
+    opacity: 0
+}
+
+  .carousel {
+    position: relative;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+    margin-top: 26px;
+    max-width: 15%;
+    margin-left: 42%;
+  }
+  
+  .carousel-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .carousel-open:checked + .carousel-item {
+    position: static;
+    opacity: 100;
+  }
+  
+  .carousel-item {
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+  }
+  
+  .carousel-item img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+  }
+  
+  .carousel-control {
+    color: orangered;
+    cursor: pointer;
+    display: none;
+    font-size: 25px;
+    height: 40px;
+    line-height: 35px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    cursor: pointer;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-align: center;
+    width: 40px;
+    z-index: 10;
+  }
+  
+  .carousel-control.prev {
+    left: 2%;
+  }
+  
+  .carousel-control.next {
+    right: 2%;
+  }
+  
+  .carousel-control:hover {
+    color: #aaaaaa;
+  }
+  
+  #carousel-1:checked ~ .control-1,
+  #carousel-2:checked ~ .control-2,
+  #carousel-3:checked ~ .control-3 {
+    display: block;
+  }
+  
+  .carousel-indicators {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+  }
+  
+  .carousel-indicators li {
+    display: inline-block;
+    margin: 0 5px;
+  }
+  
+  .carousel-bullet {
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 35px;
+  }
+  
+  .carousel-bullet:hover {
+    color: #aaaaaa;
+  }
+  
+  #carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+  #carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+  #carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+    color: orangered;
+  }
+  
+  .logo{
+    flex: 1 1 auto;
+    margin-left: 10%;
+    text-transform: uppercase;
+  }
+
+  #cooker{
+      text-align: center;
+      margin: 10px 20%;
+
+
+  }
+  #cooker span{
+      color: orangered;
+  }
+  #cooker hr{
+      width: 10%;
+  }
+  #cooker p {
+      text-align: center;
+  }
+  
+  a{
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 15px;
+    font-size: 10px;
+  }
+
+#blog{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: hidden;
+    height: 700px;
+    margin-bottom: 100px;
+    text-align: center;
+    justify-content: center;
+    background-image: url(/images/blog/blog-bg.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0 170px;
+}
+.title{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.food1{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    height: 160px;
+    margin-top: 100px;
+    text-align: center;
+    padding-bottom: 1px;
+    background-color: white;
+    
+}
+#blog img:hover {
+    transform: scale(1) rotate(15deg);
+    animation-duration: 10s ease;
+    animation-iteration-count: infinite;
+    border-radius: 5%;
+    overflow: hidden;
+    z-index: -1;
+
+}
+
+    
+/*@keyframes moveImg{
+    0%{transform: rotate(0deg);transform: scale(1);}
+    50%{transform:rotate(25deg);transform:scale(1.1)}
+    100%{transform:rotate(0deg);transform: scale(1);}*/
+
+
+.food2{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    height: 160px;
+    margin-top: 0px;
+    text-align: center;
+    background-color: white;
+    padding-bottom: 10px;
+    
+   
+}
+.food3{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    height: 160px;
+    text-align: center;    
+    background-color: white;
+}
+.bottone1{
+    background-color: orangered;
+    margin-bottom: 120px;
+    margin-left: 100%;
+    margin-right: 25%;
+    float: right;
+    padding:15px 10.5%;
+}
+.testi{
+    margin-top: 40px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+/* section button{
+    background-color: aquamarine;
+    color: white;
+    text-shadow: 1px 1px black;
+    border-style: none;
+}
+     */
+
+
+.subscribe span{
+    color:orangered;
+    font-weight: bold;
+}
+/* .subscribe input{
+    width: 50%;
+    height: 35px;
+    margin-left: 324px;
+}
+.subscribe button{
+    width: 50%;
+    height: 40px;
+    margin-right: 50%;
+    
+    
+} */
+.newsletter{
+  line-height: 40px;
+}
+
+.subscribe{
+    background-image: url(../images/subscribe-bg.jpg);
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items:center;
+    background-size: auto;
+    background-repeat:no-repeat;
+    color: white;
+    margin: 0px 0px;
+    height: 300px;
+    
+}
+
+
+.subscribe div p{
+    font-size:small;
+    font-weight: bold;
+    color: white;
+}
+
+.menu{
+    display:flex;
+    flex-direction: column;
+    margin: 10px 12%;
+}
+   
+#menu-price{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom:10%;
+
+}
+
+#menu-price h3{
+    font-size:2rem;
+}
+    
+#pre-menu{
+    text-align: center;
+    color: gray;
+    font-size: 0.9rem;
+    padding-bottom: 10px;
+}
+
+.menu h3,h4{
+    font-weight: bold;
+    padding-bottom: 5px;
+    
+}
+
+.menu h3{
+    text-align: center;
+}
+.menu h3 span{
+    color: orangered;
+}
+
+.menu hr{
+    width: 150px;
+    opacity: 0.5;
+}
+
+#week{
+    color: orangered;
+}
+
+.elenco-menu {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+  
+    
+
+}
+
+.elenco-menu p{
+    color: gray;
+    padding: 10px;
+    
+}
+   
+.border-bottom{
+    height: 14px;
+    width: 72%;
+    border-bottom: gray 1px dotted;
+    position: absolute;
+ 
+}
+
+
+.food span{
+    color: gray;
+    float: right;
+   
+}
+
+.food h4{
+float:left;
+
+}  
+ 
+
+
+#more-info:hover{
+    background-color: orangered;
+    color: white;
+    transition: all 0.5s;
+}
+
+#more-info{
+    color:orangered;
+    text-decoration: none;
+    border: 1px solid orangered;
+    font-size: 0.8rem;
+    padding: 30px 90px 30px 90px;
+}
+
+#orange-info{
+    display: flex;
+    padding:20px;
+    justify-content: flex-end;
+}
+.subscribe h1{
+    margin-top: 80px;
+    font-size:1.5rem;
+}
+
+.iscrizione{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top:20px;
+}
+
+#pulsante{
+    background-color: #5fc3b9;
+    border: none;
+    color:white;
+    text-shadow:1px 1px 1px black;
+    width: 50%;
+    height: 51px;
+}
+
+#e-mail{
+    width:550px;
+    border: none;
+}
+
+/* ------ di seba ----*/
+#contact-us{
+
+}
+
+
+.our{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    font-size:2rem;
+    padding-top: 50px;
+    
+}
+
+.sing-up-for p{
+    color: black;
+}
+.sing-up-for{
+    display: flex;
+    flex-direction:column;
+    align-items: flex-start;
+    margin: 5px 13%;
+   margin-top: 50px;
+    font-weight: bold;
+    font-size:2rem;
+}
+
+
+
+
+section div input {
+    width: 100%;
+    height: 50px;
+}
+section div textarea {
+    width: 100%;
+    height: 150px;
+
+}
+div span{
+    color: orangered;
+}
+.invia{
+    float:right;
+    background-color:orangered;
+    text-decoration: none;
+    color: white;
+    width: 30%;
+    padding: 15px;
+    margin-left: 87%;
+    margin-right: 13%;
+    margin-bottom: 80px;
+    text-align: center;
+}
+.hr{
+    height: 0vw;
+    width: 15vw;
+    color: rgb(190, 190, 190);
+}
+
+/*------------------ FOOTER ---------------*/
+footer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+}
+    
+
+.indirizzi{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap:20%;
+}
+
+footer span{
+    color: orangered;
+}
+.footerimg{
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    gap: 30%;
+    justify-content: space-between;   
+}
+.contactinfo{
+    width: 220px;
+    height: 250px;
+}
+.latestblogposts{
+width:25%;
+}   
+
+.photostream{
+  width: 30%;
+
+}
+
+.contact{
+    margin-top: 20px;
+}
+.data{
+    margin-top: 20px;
+}
+.followus{
+    margin-top: 20px;
+}
+
+.copyright{
+    display: flex;
+    justify-content: center;
+    font-size:1rem;
+    background-color: rgb(230, 230, 230);
+    padding: 20px;
+    
+}
+.copyright span{
+    color: orangered;
+}
+
+
+
+

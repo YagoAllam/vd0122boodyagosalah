@@ -1,0 +1,44 @@
+/** per me gia tutto perfetto e il sito è giá responsive**/
+
+/** alcuni miglioramenti**/
+
+@media (min-width: 320px) {
+    body {
+        font-size: 1.3rem;
+        padding: 5px;
+    }
+
+    .imgLeft {
+        display: none;
+    }
+
+
+    @media screen (min-width: 720px) {
+        body {
+            font-size: 1.4rem;
+            padding: 10px;
+        }
+
+        .imgLeft {
+            display: none;
+        }
+
+        #table {
+            margin auto;
+        }
+
+        /**text-align: center; **/
+
+    }
+
+    @media print {
+        body {
+            font-size: large;
+            font-family: Arial, Helvetica, sans-serif
+        }
+
+        #table {
+            margin auto;
+        }
+
+    }

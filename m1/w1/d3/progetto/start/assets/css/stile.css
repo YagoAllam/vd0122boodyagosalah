@@ -1,0 +1,28 @@
+/* IMPOSTAZIONI GENERALI */
+body{font-family: 'Raleway', sans-serif; text-align:center; padding:30%; }
+
+
+/* HEADER */
+header{background-color: rgb(69, 189, 189);}
+h1{font-size: xx-large;}
+header span{background-color: rgb(255, 255, 255); color: aqua; margin-bottom: 50%  ; }
+h2{font-size:medium; margin-top: 1.5em; font-weight: bold;}
+
+/* MAIN */
+
+
+/* ELEMENTI NEL MAIN */
+main section div h2 {font-size: x-large; font-weight: bold; color: blue;}
+main section div a {  color: rgb(255, 0, 0);}
+main section h2 {font-size: x-large; font-weight: bold; color: blue;}
+
+main section div blockquote {  ;   font-weight: bold; background-color: gray; border-radius:10px; padding: 1.1em;padding: left 50px;mm }
+main section div address b { font-weight: bold;}
+main section div p b { margin-top: 100%; font-weight: bold;}
+
+
+/* FOOTER */
+footer{background-color: black; color: blanchedalmond;}
+footer p kbd {color: rgb(255, 230, 0);}
+footer p a {color: rgb(255, 0, 0); margin-top: 50px;}
+

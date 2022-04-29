@@ -1,0 +1,367 @@
+/* IMPOSTAZIONI GENERALI */
+body {
+    color: #000;
+    font-size: 1.4rem;
+    font-family: 'Fira Sans', sans-serif;
+    line-height: 1.8;
+}
+
+
+h1 {
+    font-size: 2.9rem;
+
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+
+}
+
+h4 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 1.3;
+
+}
+
+footer {
+    background-color: rgb(238, 238, 238);
+
+}
+
+
+
+/* HEADER */
+
+header {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+
+}
+
+header img {
+    margin-top: 5vh;
+}
+
+
+
+.list {
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+
+.list a {
+    padding: 1rem 2rem;
+    color: #333;
+
+}
+
+/* per aiutare la UX */
+.list a:hover {
+    color: rgb(0, 0, 255);
+    text-shadow: 0.5px 0.5px 0.5px;
+    background: rgb(236, 231, 231)
+}
+
+.menu {
+    background-color: azure;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s;
+    margin-top: 10%;
+
+}
+
+#apri-menu {
+    display: none;
+}
+
+input:checked+.menu {
+    height: 120px;
+}
+
+
+
+/* MAIN */
+main {
+    margin-top: 10vh;
+}
+
+#sec1 {
+
+
+    background-image: url(../images/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    line-height: 1.2;
+
+}
+
+.sec1 {
+
+    padding: 2rem 3rem;
+    margin-left: 20px;
+
+}
+
+.weare {
+    text-align: center;
+    width: 40rem;
+    margin: 0 auto;
+}
+
+.bottone {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    padding: 0.3em 2em;
+    border-radius: 3%;
+    background-image: linear-gradient(to right, #6cc1e2, #392f7a);
+    border-radius: 2px;
+
+}
+
+.largo {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+}
+    
+
+
+.special {
+    border: 1.5px solid black;
+
+}
+
+/* per il UX ho visto buono questo effetto */
+.bottone:hover {
+    background-image: linear-gradient(to right, #392f7a, #6cc1e2)
+}
+
+
+
+.sec2 {
+
+    text-align: center;
+    margin-top: 20vh;
+
+}
+
+
+.fotoetesto {
+    padding: 0.2em 0.2em;
+    margin-bottom: 50px;
+}
+
+
+.lni {
+    color: red;
+    font-size: 2rem;
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+
+
+.sec3 {
+    text-align: center;
+    background-color: rgb(3, 3, 43);
+    color: white;
+    padding: 3rem;
+
+}
+
+.sec4 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+
+}
+
+.sec2inline {
+    text-align: center;
+}
+
+.sec2colonna {
+    text-align: center;
+}
+
+
+/* table */
+.tab-desketablet {
+    width: 60vw;
+    margin: 0 auto;
+    text-align: center;
+    padding: 1rem 1rem;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border: 1px solid rgb(235, 235, 235);
+    border-radius: 10px;
+
+}
+
+
+}
+
+.tab-desketablet th {
+    padding: 5px;
+    background-color: #079fdb;
+    color: white;
+}
+
+.sfondoblu {
+    background-color: #6cc1e2;
+}
+
+
+.tab-mobile th {
+    font-weight: bold;
+}
+
+.tab-mobile {
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+
+
+/* FOOTER */
+
+footer {
+    font-size: smaller;
+}
+
+.copy {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 20px;
+
+}
+
+
+/* RESPONSIVE */
+
+
+@media screen and (min-width: 720px) {
+
+    #navmobile {
+        display: none;
+    }
+
+    .senza-bg {
+
+        color: #000;
+        text-align: center;
+    }
+
+    #sec1 {
+        padding: 3rem;
+
+    }
+
+    .sec2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+    }
+
+    .sec2colonna {
+        text-align: center;
+
+    }
+
+    .sec2inline {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        text-align: center;
+
+    }
+
+    .sec4 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .tab-mobile {
+        display: none;
+    }
+
+
+    .foot {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+    }
+
+    .footinline {
+        padding: 0.5rem;
+        margin-top: 20px;
+    }
+
+    .copy {
+        text-align: center;
+        margin-bottom: 20px;
+
+    }
+
+}
+
+@media screen and (max-width: 425px) {
+    .tab-desketablet {
+        display: none;
+    }
+
+    #navdesktop {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .weare {
+        width: 70vw;
+        margin: 0 auto;
+        font-size: 1rem;
+    }
+
+    .sec2 {
+        width: 90vw;
+        margin: 0 auto;
+    }
+
+    .fotoetesto img {
+        width: 90vw;
+        margin: 0 auto;
+    }
+
+}
+

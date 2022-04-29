@@ -1,0 +1,21 @@
+.blocco {
+width:100px;
+height: 100px;background-color:red
+
+}
+
+
+.c1 {
+
+    animation-name: colore;
+    animation-duration: 3sec;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes colore {
+    0% { background-color:red}
+    50% { background-color:blue}
+    100% { background-color:red}
+
+}

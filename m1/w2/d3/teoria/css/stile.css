@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+}
+
+
+.blocco {
+    background-color: yellow;
+    border: solid black 1px;
+    font-size: 4rem;
+    height: 200px;
+    width: 50px;
+
+
+
+
+}
+
+#n1 {
+    justify-content: space-between;
+
+
+}

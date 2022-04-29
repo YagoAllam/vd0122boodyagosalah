@@ -1,0 +1,26 @@
+@media (max-width: 11200px) {
+
+    .blog {
+        width: 1024px;
+
+    }
+
+    @media (max-width: 1024px) {
+
+        .blog {
+            width: 768px;
+        }
+
+        .blocco {
+            width: calc(100% / 2 -2px);
+        }
+
+        @media (max-width: px) {
+
+            .blog {
+                width: 100%;
+            }
+
+            .blocco {
+                width: calc(100% -2px);
+            }

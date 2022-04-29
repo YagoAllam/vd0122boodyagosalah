@@ -1,0 +1,11 @@
+.datadioggi {
+    padding: 1rem 2rem;
+    background-color: rgb(146, 0, 0);
+    color: bisque;
+    font-size: xx-large;
+}
+
+.button {
+    padding: 1rem 2rem;
+    background-color: blueviolet;
+}

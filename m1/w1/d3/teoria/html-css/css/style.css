@@ -1,0 +1,24 @@
+
+/* general style */
+
+
+
+/* stile del header
+1x */
+
+h1{font-weight: bold;
+    fomt-size:12 ;
+    font-family: roboto;
+
+
+}
+
+
+h1, h2{ font-weight: bold;}
+
+#header /* sono quelli che hano l id header */
+
+
+#numeri div{}   tutti i div figlio di numeri
+
+.articolo (collegarsi alla classe articolo)

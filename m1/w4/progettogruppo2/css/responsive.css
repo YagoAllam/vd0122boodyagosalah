@@ -1,0 +1,483 @@
+@media screen and (min-width: 768px) and (max-width:1200px){
+
+#blog{
+    display: flex;
+    flex-direction: row;
+    height: 1%;
+    width: 55%;
+    margin-left: 5%;
+    text-align: center;
+    margin-top: 40px;
+}
+.img1{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    height: 170px;
+
+}
+.img2{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    height: 170px;
+
+}
+.img3{
+    display: flex;
+    flex-direction: row;
+}
+.img4{
+    display: flex;
+    flex-direction: row;
+}
+.img5{
+    display: flex;
+    flex-direction: row;
+    height: 170px;
+}
+
+.img6{
+        display: flex;
+        flex-direction: row;
+        height: 170px;
+}
+.food1{
+    margin-right: 50%;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    width: 50px;
+
+}
+.food2{
+    margin-right: 50%;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    width: 50px;  
+}
+.food3{
+    margin-right: 50%;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    width: 50px; 
+}
+
+.testi1{
+padding: 10px 80px;
+height: 150px;
+background-color: white;
+
+}
+.testi2{
+padding: 10px 80px;
+background-color: white;
+height: 150px;
+}
+.testi3{
+padding: 10px 80px;
+background-color: white;
+height: 150px;
+}
+.testi4{
+padding: 10px 80px;
+background-color: white;
+height: 150px;
+}
+.testi5{
+padding: 10px 80px;
+background-color: white;
+height: 150px;
+}
+.testi6{
+padding: 10px 80px;
+background-color: white;
+height: 150px;
+}
+.bottone1{
+    background-color: orangered;
+    padding: 20px 80px;
+    margin: 10px 100px;
+}
+
+#e-mail{
+width: 100%;
+margin-bottom: 10px;
+}
+#pulsante{
+    width: 60%;
+    height: 30px;
+    background-color: #5fc3b9;
+    border: none;
+    color:white;
+    text-shadow:1px 1px 1px black;
+    width: 50%;
+    height: 52px;
+    }
+    
+footer{
+    display: flex;
+    flex-direction: row;
+    }
+.copyright{
+        text-align: center;
+       
+    }
+    .subscribe{
+    display: flex;
+    flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 390px) and (max-width:768px)
+{
+    #nav{
+        background-color: transparent;
+        height: 0;
+        overflow: hidden;
+        transition: 0.6s;
+        width: 100%;
+
+    }
+    #apri-menu{
+        display: none;
+        opacity: 1;
+    }
+    #toggle{
+        opacity: 1;
+    }
+    #toggle{
+        color: orangered;
+    }
+    input:checked + #nav{
+        height: 100px;
+    }
+    #nav{
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        line-height: 1;
+        margin-left: 10%;
+        width: 100%;
+    }
+    
+        .carousel{
+            position: relative;
+            box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+            margin-top: 26px;
+            max-width: 30%;
+            margin-left: 33%;
+    } 
+    .carousel-control {
+        background: rgba(0, 0, 0, 0.);
+        color: orangered;
+        cursor: pointer;
+        display: none;
+        font-size: 25px;
+        height: 40px;
+        line-height: 35px;
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translate(0, -50%);
+        cursor: pointer;
+        -ms-transform: translate(0, -50%);
+        transform: translate(0, -50%);
+        text-align: center;
+        width: 40px;
+        z-index: 10;
+    }
+   
+    
+        .subscribe{
+            display: flex;
+            flex-direction: column;
+        }
+        #blog{
+            display: inline-block;
+            flex-direction: column;
+            height: 1000px;
+            width: 40%;
+            margin-top: 1px;
+            margin-bottom: 100px;
+            margin-left: 7%;
+            background-size: cover;
+            overflow-y: scroll;
+            
+        
+            
+        }
+        .testi1{
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            padding: 10px 40px;
+            width: 120px;
+            height: 150px;  
+        }
+        .img1{
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+            width: 200px;
+            height: 150px;
+            
+            
+        }
+        .food1{
+            display: flex;
+            flex-direction: column;
+            margin-top: 100px;
+            padding: 10px 10px;
+            background-color: transparent;
+           
+        }
+        .testi2{
+            display: flex;
+            flex-direction: column;
+            background-color: white;  
+            padding: 10px 40px;
+            width: 120px;
+            margin-top: 0px;
+            margin-bottom: 500px;
+            
+        }
+        .img2{
+            display: flex;
+            flex-direction: column;
+            width: 200px;
+            height: 150px;
+            margin-top: 0px;
+            
+        }
+        .food2{
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            margin-bottom: 20px;
+            margin-top: 100px;
+            width: 0px;
+            
+        }
+        .testi3{
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        text-align: center;
+        width: 200px;
+        padding: 30px 0px;
+        margin-top: 0px;
+        margin-left: 10px;
+        
+        
+    }
+    .img3{
+        display: flex;
+        flex-direction: column;
+        margin-top: 0px;
+        margin-left: 10px;
+        width: 200px;
+        height: 155px;
+    }
+
+    .testi4{
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        text-align: center;
+        width: 200px;
+        padding: 30px 0px;
+        margin-top: 0px;
+        margin-left: 10px;
+    }
+    .img4{
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        height: 150px;
+        margin-left: 10px;
+        
+    }
+
+    .food3{
+        display: flex;
+        flex-direction: row;
+        width: 0px;
+        height: 0px;
+    }
+    
+      /*----------------------------*/  
+       
+        
+        .testi5{
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            text-align: center;
+            display: none;
+            
+        }
+        .img5{
+            display: flex;
+            flex-direction: column;
+            width: 210px;
+            height: 150px;
+            margin-top: 133px;
+            display: none;
+            
+                    
+        }
+        
+        .testi6{
+        display: flex;
+        flex-direction: column;
+        background-color: orangered;
+        padding: 0 50px;
+        height: 170px;
+        margin-top: 500px;
+        display: none;
+        
+        
+        }
+    
+    
+    .img6{
+        display: flex;
+        flex-direction: column; 
+        display: none;
+        
+    }
+    .bottone1{
+        display: flex;
+        flex-direction: column;
+        background-color: orangered;
+        display: none;
+        
+    }
+    
+.iscrizione{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+#e-mail{
+    margin-bottom: 2%;
+    width: 90%;
+}
+
+#pulsante{
+    width: 35%;
+    
+}
+.menu{
+    display:flex;
+    flex-direction: column;
+    column-gap:10px;
+    padding:0;
+    margin-left: 10px;
+}
+.elenco-menu{
+    display: flex;
+    flex-direction: column;
+ 
+}
+
+.elenco-menu p{
+    padding-left: 0;
+    padding-bottom: 30px;
+}
+
+#menu-price{
+margin-left: 10%;
+margin-bottom: 10%;
+}
+
+.border-bottom{
+    display: none;
+}
+
+.food span{
+float: none;
+
+}
+
+.food h4{
+    float: none;
+    padding-top: 5px;
+    padding-bottom: 10px;
+
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding-left: 0vw
+}
+    
+
+.indirizzi{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap:20%;
+    padding-left: 28vw;
+}
+.latestblogposts{
+    padding-left: 10vw;
+
+}
+
+footer span{
+    color: orangered;
+}
+.footerimg{
+    display: flex;
+    flex-direction: row;
+    text-align:center;
+    width: 30%;
+    gap: 30%;
+    justify-content: center;
+    padding-left: 15vw;
+
+}
+.photstream{
+   display: inline-block;
+}
+.photostream h4{
+    padding-left: 13vw;
+    margin-top: 20px;
+
+}
+.followus{
+    padding-left: 15vw;
+}
+.contactinfo{
+    width: 220px;
+    height: 250px;
+    margin-top: 20%;
+}
+
+.invia{
+    display: flex;
+    flex-direction: column;
+    float: none;
+    justify-content: center;
+    margin: 0;
+    width: 65%;
+    margin-left: 14%;
+}
+
+}  
+    
+   
+    
+    
+
+
+    
+    
+    
+    
+    

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Ordina la tua pizza</h1>
+    <form action="get" action=" pagina-aquimandare-idati.php"> <!--get viene messo nella barra degli indirizzi-->
+        <h3>scegli il tipo</h3>
+        <select name="gusto">
+            <option>--scegli--</option>
+            <option value="margerita">Margerita</option> <!--al backend viene mandato gusto:margerita -->
+            <option value="davola">Diavola</option>
+        </select>
+        <h3>scegli la dimensione</h3>
+        <label for="tiposottile"></label>
+        sottile: <input id="tiposottile" type="radio" name="tipo" checked>
+        napolitana: <input type="radio" name="tipo">
+
+        <h3>aggiunte</h3>
+        <label for="bf">Bufala</label>
+        <input id="bf" type="checkbox" name="aggiuntabuff">
+        <label for="pr">Prosciuto</label>
+        <input id="pr" type="checkbox" name="aggiuntaprosciuto">
+        <hr>
+
+        <label for="nome">Nome</label>
+        <input id="nome" type="text" placeholder="scrivi il nome">
+<hr>
+        <button>ordina button</button>
+        <input type="submit" value="ordina input"> <!-- sono indefferente con il button-->
+
+
+
+
+
+
+
+    </form>
+
+</body>
+</html>

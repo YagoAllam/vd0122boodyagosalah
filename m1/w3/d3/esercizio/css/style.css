@@ -1,0 +1,16 @@
+#orario{
+    width: 50px;
+    height: 20px;
+    text-align: center;
+    overflow:auto  ;
+    padding: 5rem 6rem;
+    background-color: rgb(226, 156, 156);
+    border-radius: 70%;
+    text-shadow: 1px 1px;
+    font-weight: 900;
+    font-size: xxx-large;
+    
+
+
+
+}

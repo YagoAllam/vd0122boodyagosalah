@@ -1,0 +1,49 @@
+/* IMPOSTAZIONI GENERALI */
+
+html{;background-attachment: fixed; background-image: url(../img/sfondo.png) }
+
+/* HEADER */
+header{ border-radius:5px;
+margin-bottom: 10px;}
+#header{  padding: 50px;   background-color: rgb(14, 185, 185); text-align: center; }
+.logo{size: 10000; color:white;}
+.titolo-blog{font-weight: bold; text-transform: uppercase; text-align: center;  }
+.menu-nav a{ font-weight: bold; color: whitesmoke ;text-decoration: none; text-transform: uppercase; }
+
+/* MAIN */
+
+
+main {font-family: ;
+    margin-left: 5vw;
+width: 70vw;
+padding-left: 10vw;
+padding-right: 10vw;}
+
+header li {list-style-type: none;}
+.titolo{font-size: xxx-large;}
+.art-princ   {background-color:white}
+
+iframe{width: 70; margin-left: 20vw; border-radius: 20px;}
+/* ELEMENTI NEL MAIN - ARTICLE */
+
+/* TABELLE */
+caption{font-weight: bold;font-size: x-large;}
+thead {background-color: #6262ee; color:white;}
+td{text-align: center;}
+table{margin-left: 15vw; width: 25rem; height: 20rem;}
+.gris{background-color: rgb(218, 216, 216);}
+
+/* FORM */
+
+/* ELEMENTI NELL' ASIDE */
+.artic1 {background-color: gray; margin-bottom: 10px; border: solid;}
+.artic2 {background-color: gray; margin-bottom: 10px; border: solid;}
+.artic3 {background-color: gray; margin-bottom: 10px; border: solid;}
+aside a {color: blue; font-size: x-large;}
+aside p {}
+
+
+
+/* FOOTER */
+ 
+footer{background-color: blue; text-align: center; font-weight: bold;}

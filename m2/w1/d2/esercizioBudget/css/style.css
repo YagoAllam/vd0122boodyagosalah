@@ -1,0 +1,16 @@
+body{
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 200px;
+    
+}
+
+
+#inizia {
+    padding: 2rem 10rem;
+    color: beige;
+    background-color: black;
+
+}

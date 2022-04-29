@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Calcolatrice Boody blind friendly</title>
+</head>
+
+<body>
+
+    <head>
+        <button class="cambiacolore" onclick="cambiaColore(), fras(), amici()" ondblclick="testo()">Se vedi l'ora, clicca qui!<div
+                id="orario"></div> </button>
+
+               <!-- UX: per il te che vede ho cercato di sensibilizzargli sul mondo dei non vedenti mettendo frasi a random e cambiando il colore della calcolarice casualmente-->
+                <!-- mi avrebbe piacciuto far si che si legga il risultato finale nel display però non sono riuscito  -->
+                <!-- per la UX ho fatto apposta che non si veda il numero al cliccare -->
+    </head>
+
+    <main>
+
+        <div>
+            <p>cliccaci ancora due volte!</p>
+            <div ></div>
+           <textarea class="salumi"  cols="25" rows="4"></textarea>
+        </div>
+
+
+
+        <div id="calcolatrice">
+
+            <div class="display">
+                <input type="text" id="schermo">
+
+
+            </div>
+            <div class="tasti">
+                <button class="put1" onmouseover="uno()" onclick="aggiungiNumero(this)">1</button>
+                <button class="put2" onmouseover="due()" onclick="aggiungiNumero(this)">2</button>
+                <button class="put3" onmouseover="tre()" onclick="aggiungiNumero(this)">3</button>
+                <button class="put4" onmouseover="quattro()" onclick="aggiungiNumero(this)">4</button>
+                <button class="put5" onmouseover="cinque()" onclick="aggiungiNumero(this)">5</button>
+                <button class="put" onmouseover="sei()" onclick="aggiungiNumero(this)">6</button>
+                <button class="put" onmouseover="sette()" onclick="aggiungiNumero(this)">7</button>
+                <button class="put" onmouseover="otto()" onclick="aggiungiNumero(this)">8</button>
+                <button class="put" onmouseover="nove()" onclick="aggiungiNumero(this)">9</button>
+                <button class="put" onmouseover="zero()" onclick="aggiungiNumero(this)">0</button>
+                <button class="put" onmouseover="per()" onclick="aggiungiNumero(this)">.</button>
+                <button class="put" onmouseover="piu()" onclick="aggiungiNumero(this)">+</button>
+                <button class="put" onmouseover="meno()" onclick="aggiungiNumero(this)">-</button>
+                <button class="put" onmouseover="per()" onclick="aggiungiNumero(this)">*</button>
+                <button class="put" onmouseover="deviso()" onclick="aggiungiNumero(this)">/</button>
+                <button class="put" onmouseover="per()" onclick="aggiungiNumero(this)">%</button>
+                <button class="putc" onmouseover="canc()" onclick="cancella(this)">CANCEL</button>
+
+                <div class="tastouguale">
+                    <button class="putris" onmouseover="uguale()" onclick="risultato(this)">=</button>
+                </div>
+
+                <audio class="uno" src="assets/unoo.mp3"></audio>
+                <audio class="due" src="assets/due.mp3"></audio>
+                <audio class="tre" src="assets/tree.mp3"></audio>
+                <audio class="quattro" src="assets/quattro.mp3"></audio>
+                <audio class="cinque" src="assets/cinque.mp3"></audio>
+                <audio class="sei" src="assets/sei.mp3"></audio>
+                <audio class="sette" src="assets/sette.mp3"></audio>
+                <audio class="otto" src="assets/Otto.mp3"></audio>
+                <audio class="nove" src="assets/nove.mp3"></audio>
+                <audio class="zero" src="assets/zero.mp3"></audio>
+                <audio class="uguale" src="assets/uguale.mp3"></audio>
+                <audio class="canc" src="assets/cancella.mp3"></audio>
+                <audio class="per" src="assets/per.mp3"></audio>
+                <audio class="deviso" src="assets/deviso.mp3"></audio>
+                <audio class="meno" src="assets/meno.mp3"></audio>
+                <audio class="piu" src="assets/piu.mp3"></audio>
+                <audio class="amici" src="assets/amici.mp3"></audio>
+
+
+
+            </div>
+
+        </div>
+
+
+
+    </main>
+
+
+
+
+
+    <footer>
+
+
+    </footer>
+
+
+<script src="js/script.js"></script>
+
+    
+</body>
+
+</html>
