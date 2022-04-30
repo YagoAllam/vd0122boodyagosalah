@@ -1,4 +1,4 @@
-let arrayAnimali = ['🐱', '🦉', '🐾', '🦁', '🦋', '🐛', '🐝', '🐬', '🦊', '🐨', '🐰', '🐯', '🐱', '🦉', '🐾', '🦁', '🦋', '🐛', '🐝', '🐬', '🦊', '🐨', '🐯', '🐰'];
+wlet arrayAnimali = ['🐱', '🦉', '🐾', '🦁', '🦋', '🐛', '🐝', '🐬', '🦊', '🐨', '🐰', '🐯', '🐱', '🦉', '🐾', '🦁', '🦋', '🐛', '🐝', '🐬', '🦊', '🐨', '🐯', '🐰'];
 //libreria per icone
 //https://html-css-js.com/html/character-codes/
 
@@ -27,6 +27,8 @@ let timer = setInterval(() => {
     now.setSeconds(now.getSeconds() + 1);
     
 }, 1000);
+
+document.getElementsByClassName('timer').value = timer
 
 
 
@@ -103,7 +105,7 @@ griglia.innerHTML = "";
 
 
 function creaGriglia(arrayAnimali) {
-    for (let i = 0; i < array.length; i++) {
+    for (let i = 0; i < arrayAnimali.length; i++) {
         griglia.innerHTML += `
             <div id="div-${i}">
                 ${array[i]}
@@ -113,9 +115,16 @@ function creaGriglia(arrayAnimali) {
 }
 
 
-// chiama la funzione timer e associa a tutti gli elementi (div) di classe icon l'evento click e le due funzioni definit sotto
+// chiama la funzione timer e associa a tutti 
+// gli elementi (div) di classe icon l'evento click e le due funzioni definit sotto
 
-timer()
+timer();
+
+let icon = document.getElementsByClassName("icon")
+
+icon.addEventListener("click", displayIcon)
+
+
 
 function displayIcon() {
     var icon = document.getElementsByClassName("icon");

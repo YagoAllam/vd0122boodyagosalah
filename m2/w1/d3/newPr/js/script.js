@@ -23,14 +23,13 @@ document.DOCUMENT_FRAGMENT_NODE
     
 })
 
-function name(params) {
-    
+function area(array) {
+    for (let i = 0; i < array.length; i++) {
+        griglia.innerHTML += `
+            <div id="div-${i}">
+                ${array[i]}
+            </div>
+        `;
+    }
 }
 
-console.log();
-
-console.log();
-
-console.log();
-
-console.log();

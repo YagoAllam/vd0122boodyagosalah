@@ -14,10 +14,14 @@
 
 .icon-grid {
 /* flex! */
+display: flex;
+flex-direction: row;
+justify-content: center;
 }
 
 .show {
 /* visibilità e opacità */
+opacity: 0.5;
 }
 
 #griglia>div {
