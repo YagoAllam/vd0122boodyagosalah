@@ -1,5 +1,19 @@
+// al posto di fare il backup del file _variable.scss da bootstrap, ho importato con questo link sottostante.
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
+// function del ultimo punto dell'esercizio imoprtata qui sotto
+@import "function";
 
-#first-cta{
-   background-image: url(/assets/images/271957192_273051138088336_6714951333049352470_n.jpg);
+// per provare la funzionalità della funzione CambiaColore prova a cambiare lo sfondo sottostante che è lo sfondo della prima sezione
+.first-cta{
+   background-color: #808080;
 }
+
+.lavoraConNoi {
+   background-color: #ffffff
+}
+.iscriviti {
+   background-color: #28a745
+}
+
+
+p{color:CambiaColore(#808080)}

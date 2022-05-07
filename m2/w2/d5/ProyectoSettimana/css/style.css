@@ -7808,9 +7808,14 @@ textarea.form-control-lg {
     display: inline-flex !important; }
   .d-print-none {
     display: none !important; } }
-    #first-cta{
-     
-      background-attachment: fixed;
-      
-      background-color:#28a745;
-   
+
+.first-cta {
+  background-color: #808080; }
+
+.lavoraConNoi {
+  background-color: #ffffff; }
+
+.iscriviti {
+  background-color: #28a745; }
+
+

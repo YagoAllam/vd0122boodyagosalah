@@ -1,0 +1,9 @@
+@function CambiaColore($color){
+    @if(lightness($color) >= 50){
+        @return rgb(0, 0, 0);
+    }@else{
+        @return rgb(255, 255, 255);
+    }
+ }
+ 
+ 
