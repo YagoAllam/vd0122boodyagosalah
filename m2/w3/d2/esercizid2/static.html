@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        class Pizza{
+            
+            tipo = 'Napoletana'
+            static farina = '00'
+
+            constructor(gusto, prezzo){
+                this.gusto = gusto;
+                this.prezzo = prezzo;
+            }
+
+            static mostraFarina(){
+                console.log(this.farina);
+                console.log(this.prezzo);
+                console.log(this.tipo);
+            }
+        }
+
+        let margherita =  new Pizza('Margherita', 4)
+
+        console.log(margherita);
+        console.log(margherita.gusto);
+        console.log(margherita.farina);
+        console.log(Pizza.farina);
+        Pizza.mostraFarina()
+
+    </script>
+</body>
+</html>
