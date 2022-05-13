@@ -1,0 +1,14 @@
+table{
+    background-color: rgb(0, 255, 238);
+    border-radius: 10px;
+    border: 5px solid rgb(244, 244, 244);
+
+
+
+}
+
+.trhead {
+    font-size: x-large;
+    font-weight: 630;
+    background-color: rgb(0, 174, 168);
+}
