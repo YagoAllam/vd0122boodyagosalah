@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container" id="main">
+        <div class="row">
+            <div class="col-12">
+                <div class="row align-items-center">
+                    <div class="col-9">
+                        <h1 class="display-1">Buildweek</h1>
+                    </div>
+                    <div class="col-3" id="searchBar">
+                        <div class="search-wrapper">
+                            <input type="search" id="search" class="form-control" placeholder="Cerca utente"
+                                data-search>
+                        </div>
+                        <div class="user-cards d-none" data-user-cards-container id="risultatiRicerca">
+                        </div>
+                        <template data-user-template>
+                            <div class="card">
+                                <div class=" header" data-header></div>
+                                <div class="body" data-body></div>
+                                <div class="id" data-id></div>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+                <hr>
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <h2>Crea nuovo utente</h2>
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="form">
+                                    <form id="newUser">
+                                        <input type="hidden" class="form-control" name="idUtente" id="idUtente"
+                                            placeholder="ID">
+                                        <input type="text" class="form-control" name="name" id="name"
+                                            placeholder="Nome e cognome">
+                                        <input type="text" class="form-control mt-2" id="username"
+                                            placeholder="Username">
+                                        <input type="email" class="form-control mt-2" id="email" placeholder="Email">
+                                        <input type="text" class="form-control mt-2" id="telefono"
+                                            placeholder="Telefono">
+                                        <input type="text" class="form-control mt-2" id="website"
+                                            placeholder="Sito web">
+                                        <input type="text" class="form-control mt-2" id="via" placeholder="Via">
+                                        <input type="text" class="form-control mt-2" id="civico"
+                                            placeholder="N° Civico">
+                                        <input type="text" class="form-control mt-2" id="citta" placeholder="Città">
+                                        <input type="text" class="form-control mt-2" id="cap" placeholder="CAP">
+                                        <button class="btn btn-success mt-2 mb-1" id="aggiungi">Aggiungi</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <table id="utenti" class="mt-3">
+                    <thead>
+                        <tr class="">
+                            <th>ID</th>
+                            <th>Username</th>
+                            <th>Nome e cognome</th>
+                            <th>Email</th>
+                            <th>Telefono</th>
+                            <th>Sito web</th>
+                            <th class="text-center"><i class="bi bi-eye-fill"></i></th>
+                            <th class="text-center"><i class="bi bi-pencil-fill"></i></th>
+                            <th class="text-center"><i class="bi bi-trash-fill"></i></th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+                        <!-- QUI VERRANNO INSERITI GLI OGGETTI DEL JSON -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editModalLabel">Modifica</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="editModalContent">
+                    <div class="form">
+                        <h1>Modifica utente</h1>
+                        <form>
+                            <input type="text" class="form-control" id="editNome" name="name"
+                                placeholder="Nome e cognome">
+                            <input type="text" class="form-control mt-2" id="editUsername" placeholder="Username">
+                            <input type="email" class="form-control mt-2" id="editEmail" placeholder="Email">
+                            <input type="text" class="form-control mt-2" id="editTelefono" placeholder="Telefono">
+                            <input type="text" class="form-control mt-2" id="editWebsite" placeholder="Sito web">
+                            <input type="text" class="form-control mt-2" id="editVia" id="via" placeholder="Via">
+                            <input type="text" class="form-control mt-2" id="editCivico" placeholder="N° Civico">
+                            <input type="text" class="form-control mt-2" id="editCitta" placeholder="Città">
+                            <input type="text" class="form-control mt-2" id="editCap" placeholder="CAP">
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+                    <button type="button" class="btn btn-primary" id="salvaModifica">Salva</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="viewModal" tabindex="-1" aria-labelledby="viewModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="viewModalLabel">Osserva</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="viewModalContent"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="javascripts/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>
