@@ -9,7 +9,7 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="stylesheets/style.css">
-    <title>Document</title>
+    <title>Buildweek | Gruppo 2</title>
 </head>
 
 <body>
@@ -17,20 +17,27 @@
         <div class="row">
             <div class="col-12">
                 <div class="row align-items-center">
-                    <div class="col-9">
-                        <h1 class="display-1">Buildweek</h1>
+                    <div class="col-12 col-md-9">
+                        <h1 class="display-1 fw-bold"><a class="homeLink" href="index.html">🛠 Buildweek</a></h1>
+                        <h3 class="text-secondary">Simulazione di un pannello per la gestione degli utenti.</h3>
                     </div>
-                    <div class="col-3" id="searchBar">
+                    <div class="col-12 col-md-3" id="searchBar">
                         <div class="search-wrapper">
-                            <input type="search" id="search" class="form-control" placeholder="Cerca utente"
-                                data-search>
+                            <div class="input-group">
+                                <input type="search" id="search" class="form-control form-control-lg"
+                                    placeholder="Cerca utente" data-search>
+                                <span class="input-group-text" id="basic-addon1"><i class="bi bi-search"></i></span>
+                            </div>
                         </div>
                         <div class="user-cards d-none" data-user-cards-container id="risultatiRicerca">
                         </div>
                         <template data-user-template>
                             <div class="card">
                                 <div class=" header" data-header></div>
+                                <div class="username" data-username></div>
                                 <div class="body" data-body></div>
+                                <div class="website" data-website></div>
+                                <div class="phone" data-phone></div>
                                 <div class="id" data-id></div>
                             </div>
                         </template>
@@ -42,7 +49,8 @@
                         <h2 class="accordion-header" id="headingOne">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                <h2>Crea nuovo utente</h2>
+                                <h2 class="text-success"><i class="bi bi-plus-circle me-2"></i> Nuovo
+                                    utente</h2>
                             </button>
                         </h2>
                         <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
@@ -53,19 +61,23 @@
                                         <input type="hidden" class="form-control" name="idUtente" id="idUtente"
                                             placeholder="ID">
                                         <input type="text" class="form-control" name="name" id="name"
-                                            placeholder="Nome e cognome">
+                                            placeholder="Nome e cognome" maxlength="50">
                                         <input type="text" class="form-control mt-2" id="username"
-                                            placeholder="Username">
-                                        <input type="email" class="form-control mt-2" id="email" placeholder="Email">
+                                            placeholder="Username" maxlength="20">
+                                        <input type="email" class="form-control mt-2" id="email" placeholder="Email"
+                                            maxlength="50">
                                         <input type="text" class="form-control mt-2" id="telefono"
-                                            placeholder="Telefono">
-                                        <input type="text" class="form-control mt-2" id="website"
-                                            placeholder="Sito web">
-                                        <input type="text" class="form-control mt-2" id="via" placeholder="Via">
-                                        <input type="text" class="form-control mt-2" id="civico"
-                                            placeholder="N° Civico">
-                                        <input type="text" class="form-control mt-2" id="citta" placeholder="Città">
-                                        <input type="text" class="form-control mt-2" id="cap" placeholder="CAP">
+                                            placeholder="Telefono" maxlength="30">
+                                        <input type="text" class="form-control mt-2" id="website" placeholder="Sito web"
+                                            maxlength="50">
+                                        <input type="text" class="form-control mt-2" id="via" placeholder="Via"
+                                            maxlength="50">
+                                        <input type="text" class="form-control mt-2" id="civico" placeholder="N° Civico"
+                                            maxlength="20">
+                                        <input type="text" class="form-control mt-2" id="citta" placeholder="Città"
+                                            maxlength="50">
+                                        <input type="text" class="form-control mt-2" id="cap" placeholder="CAP"
+                                            maxlength="10">
                                         <button class="btn btn-success mt-2 mb-1" id="aggiungi">Aggiungi</button>
                                     </form>
                                 </div>
@@ -73,24 +85,56 @@
                         </div>
                     </div>
                 </div>
-                <table id="utenti" class="mt-3">
-                    <thead>
-                        <tr class="">
-                            <th>ID</th>
-                            <th>Username</th>
-                            <th>Nome e cognome</th>
-                            <th>Email</th>
-                            <th>Telefono</th>
-                            <th>Sito web</th>
-                            <th class="text-center"><i class="bi bi-eye-fill"></i></th>
-                            <th class="text-center"><i class="bi bi-pencil-fill"></i></th>
-                            <th class="text-center"><i class="bi bi-trash-fill"></i></th>
-                        </tr>
-                    </thead>
-                    <tbody id="tbody">
-                        <!-- QUI VERRANNO INSERITI GLI OGGETTI DEL JSON -->
-                    </tbody>
-                </table>
+                <div class="tabella overflow-scroll">
+                    <table id="utenti" class="mt-3">
+                        <thead>
+                            <tr class="">
+                                <th>ID</th>
+                                <th>Username</th>
+                                <th>Nome e cognome</th>
+                                <th>Email</th>
+                                <th>Telefono</th>
+                                <th>Sito web</th>
+                                <th class="text-center"><i class="bi bi-eye-fill"></i></th>
+                                <th class="text-center"><i class="bi bi-pencil-fill"></i></th>
+                                <th class="text-center"><i class="bi bi-trash-fill"></i></th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody">
+                            <!-- QUI VERRANNO INSERITI GLI OGGETTI DEL JSON -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="container">
+                    <div class="row d-flex justify-content-end align-items-start">
+                        <div class="col-6 col-sm-8">
+                            <div class="pagination d-flex justify-content-center">
+                                <nav aria-label="Page navigation example" class="d-flex align-items-center pt-1">
+                                    <ul class="pagination">
+                                        <li class="page-item"><a class="page-link" href="#"
+                                                id="btnIndietro">Indietro</a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#" id="btnAvanti">Avanti</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-3 col-sm-2">
+                            <div class="selectPages">
+                                <p class="text-end d-none d-sm-block mb-1"><small>Elementi per
+                                        pagina:</small></p>
+                                <select class="form-select form-select-sm mt-2" aria-label="Default select example"
+                                    name="pages" id="selectPages">
+                                    <option selected value="tutti">Tutti</option>
+                                    <option value="10">10</option>
+                                    <option value="5">5</option>
+                                    <option value="2">2</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -98,12 +142,11 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="editModalLabel">Modifica</h5>
+                    <h2 class="modal-title" id="editModalLabel">Modifica utente</h2>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body" id="editModalContent">
                     <div class="form">
-                        <h1>Modifica utente</h1>
                         <form>
                             <input type="text" class="form-control" id="editNome" name="name"
                                 placeholder="Nome e cognome">
@@ -129,7 +172,7 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="viewModalLabel">Osserva</h5>
+                    <h2 class="modal-title" id="viewModalLabel">Dettagli utente</h2>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body" id="viewModalContent"></div>
@@ -139,12 +182,13 @@
             </div>
         </div>
     </div>
-
-    <script src="javascripts/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="javascripts/script.js"></script>
 </body>
 
 </html>

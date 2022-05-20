@@ -1,0 +1,93 @@
+body {
+  padding: 50px 0;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.homeLink {
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
+}
+
+.homeLink:hover {
+  color: red;
+}
+
+.search-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+}
+
+input {
+  font-size: 1rem;
+}
+
+.user-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: .25rem;
+  margin-top: 1rem;
+  z-index: 10;
+  position: absolute;
+}
+
+.card {
+  opacity: 1;
+  border: 1px solid lightgray;
+  background-color: white;
+  padding: .5rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 6px 10px lightgray;
+}
+
+.card>.header {
+  margin-bottom: 0rem;
+  font-weight: bold;
+}
+
+.card>.header::before {
+  content: "👤 ";
+}
+
+.card>.body {
+  font-size: .8rem;
+  color: #777;
+}
+
+.card>.username {
+  font-size: .8rem;
+  color: #777;
+}
+
+.card>.website {
+  font-size: .8rem;
+  color: #777;
+}
+
+.card>.phone {
+  font-size: .8rem;
+  color: #777;
+}
+
+.card>.id {
+  display: none;
+}
+
+.hide {
+  display: none;
+}
+
+.disabled {
+  pointer-events: none;
+  background-color: rgb(225, 225, 225);
+  color: gray;
+}
