@@ -1,0 +1,20 @@
+.cellulare {
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 200px;
+    padding: 3rem;
+    
+    
+    border-top: 1px solid #000000;
+    background-color:aqua;
+    border-radius: 10px;
+    
+
+    
+
+}
+
+h1 {
+    font-size:large;
+
+}
