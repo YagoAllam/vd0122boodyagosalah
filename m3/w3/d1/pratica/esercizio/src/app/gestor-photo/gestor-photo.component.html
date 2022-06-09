@@ -1,0 +1,23 @@
+<h1>HELLO PHOTOS</h1>
+
+<div class="container card-group" >
+    <div *ngFor="let ph of photos" >
+
+        <div class="card" style="width: 18rem;">
+            <img src="{{ph.url}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{ph.title}}</h5>
+              <p class="card-text">{{ph.title}}</p>
+              <a href="#" class="btn btn-primary">Like foto con id{{ph.id}}</a>
+            </div>
+          </div>
+        
+
+    </div>
+
+
+ 
+
+
+
+</div>
