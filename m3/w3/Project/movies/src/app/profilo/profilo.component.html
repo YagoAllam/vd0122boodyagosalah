@@ -1,13 +1,17 @@
 <h1>username: </h1>
 <form>
-    <input type="text" placeholder="movies" id="username">
+    <input class="form-control" type="text" placeholder="aggiungi movies ai tuoi preferiti" id="username" name="movie" [(ngModel)]="movie" >
+    <br>
 
-    <button>Add movies</button>
+
+
+    <button class="btn btn-primary" (click)="addMovies($event)">Add movie</button>
 
 </form>
 
 <ul>
     <li>
-
+    {{movie}}
+        
     </li>
 </ul>

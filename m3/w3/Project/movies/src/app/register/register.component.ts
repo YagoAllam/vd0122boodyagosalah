@@ -17,11 +17,12 @@ export class RegisterComponent implements OnInit {
   authUser:IuserRegister = {
     email: '',
     username: '',
-    password: ''
+    password: '',
+    telefono: ''
   }
 
   register(){
-    this.userService.registerUser(this.authUser).subscribe(res => {
+    this.userService.registerUser(this.authUser).subscribe(res=> {
       console.log(res);
     })
 

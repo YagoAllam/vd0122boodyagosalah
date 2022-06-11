@@ -19,6 +19,21 @@ export class AuthService {
     localStorage.setItem('token', token)
   }
 
+  ////////////////
+
+  //restituisce true quando fa il remove del user dal localStorage usando il suo token
+
+  loguotUser():boolean{
+    localStorage.removeItem('token')
+    return true;
+  }
+
+
+// restituisce true o false per controllare se il user ha un token o meno nel localStorage
+  isUserLoggedIn():boolean{
+    return localStorage.getItem('token') != null
+  }
+
 
 
 

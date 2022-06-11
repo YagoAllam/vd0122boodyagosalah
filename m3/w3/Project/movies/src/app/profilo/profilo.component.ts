@@ -7,9 +7,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfiloComponent implements OnInit {
 
-  constructor() { }
+  constructor() {}
 
+  movie:string = '';
+  
+  arrayMovie:[]= []
+  
   ngOnInit(): void {
   }
+  
+  addMovies(event:any):void {
+
+     let element = <HTMLInputElement>event.target
+
+    
+    this.movie = element.value
+    
+    
+   this.arrayMovie.push()
+  
+  }
+
+
 
 }

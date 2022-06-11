@@ -1,7 +1,15 @@
-<form>
-    <input type="text" placeholder="email" [(ngModel)]="authUser.email" id="email">
-    <input type="text" placeholder="username" [(ngModel)]="authUser.username" id="username">
-    <input type="text" placeholder="password" [(ngModel)]="authUser.password" id="password">
-    <button (click)="register()">Register</button>
+<h1>Registrati per aggiungere i tuoi movies favoriti</h1>
+
+<form class="">
+    
+    <input class="form-control" type="text" placeholder="email" [(ngModel)]="authUser.email" id="email" name="email" readonly>
+    <input class="form-control" type="text" placeholder="username" [(ngModel)]="authUser.username" id="username" name="username">
+    <input class="form-control" type="text" placeholder="password" [(ngModel)]="authUser.password" id="password" name="password" readonly>
+    <input class="form-control" type="text" placeholder="telefono" [(ngModel)]="authUser.telefono" id="telefono" name="telefono">
+
+    
+    <button class="btn btn-danger" (click)="register()">Register</button>
 
 </form>
+
+
