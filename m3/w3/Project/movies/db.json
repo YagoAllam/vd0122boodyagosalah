@@ -1,54 +1,11 @@
 {
   "users": [
     {
-      "email": "a@b.com",
-      "password": "$2a$10$eJzDMwtv7GWcSnJyNCAZw.AI22a6p6B.SeA5tMi8zTXUKzEIQhCNi",
-      "name": "Mario",
-      "id": 1
-    },
-    {
-      "email": "aa@aa.com",
-      "password": "$2a$10$KY5NvxpCvUgdG0tUyoOdlezuRCeuriFpkLizAc7cpNY.F9c3H.tnW",
-      "name": "Mar",
-      "id": 2
-    },
-    {
       "email": "yagoallam@gmail.com",
-      "password": "$2a$10$32eMSVnw2d1ahFiIwXlVie2XfUzDCbGbRFf0m0AZkVsvwOT1q4F3a",
-      "username": "",
-      "id": 3
-    },
-    {
-      "email": "lidukohow@mailinator.com",
-      "password": "$2a$10$eWlNe3QAHGkMap3QNbghV.bpRtP7XMNkUZDtKNIYpwEeMBe6NCSxq",
-      "username": "femagawyhi",
-      "id": 4
-    },
-    {
-      "email": "denis@gmail.com",
-      "password": "$2a$10$JKeizRjsvueCLfKzOjakPurW9xc9KEbwVni98tkTVSAKizSjC9eve",
-      "username": "yagoAll",
-      "id": 5
-    },
-    {
-      "email": "adim@gmail.com",
-      "password": "$2a$10$sID4ck53ZL1WsP4tF6APo.n19tEWoOQdAXCyE.4O6a004aFE0K8Fm",
+      "password": "$2a$10$qAg7Cq9OyZ3CdnBSrbgu/.8zJj01vjmyf1ZnCCRcVMMk0K7M3hepi",
       "username": "Yago",
-      "id": 6
-    },
-    {
-      "email": "yagoa@gmail.com",
-      "password": "$2a$10$cWyEbP4AsjZEXQaWoWgj5ura0tGgTBrfYY.YxdNZ1FDfRNyFrpPCq",
-      "username": "hshhhhkoko",
-      "telefono": "9383hjja",
-      "id": 7
-    },
-    {
-      "email": "gjgjgjh@gmail.com",
-      "password": "$2a$10$BOgqlvJ7Bf7R0.nr.wumWe04CdIPWAc9ucOfzSzzwCDVcUJZekJfq",
-      "username": "1198218khk",
-      "telefono": "cxxxxcxc",
-      "id": 8
+      "telefono": "9383",
+      "id": 1
     }
   ]
 }

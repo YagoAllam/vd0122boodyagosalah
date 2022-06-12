@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProfiloClass } from './profilo';
 
 @Component({
   selector: 'app-profilo',
@@ -9,22 +10,18 @@ export class ProfiloComponent implements OnInit {
 
   constructor() {}
 
-  movie:string = '';
+  movieInput:string = '';
   
-  arrayMovie:[]= []
+  arrayMovie:ProfiloClass[]= []
   
   ngOnInit(): void {
   }
   
-  addMovies(event:any):void {
+  addMovies():void {
 
-     let element = <HTMLInputElement>event.target
-
+  let newMovie = new ProfiloClass(this.movieInput); 
     
-    this.movie = element.value
-    
-    
-   this.arrayMovie.push()
+   this.arrayMovie.push(newMovie)
   
   }
 

@@ -1,15 +1,21 @@
-<h1>Registrati per aggiungere i tuoi movies favoriti</h1>
 
-<form class="">
+<div class="container">
+    <h1>Registrati per creare un proviolo & aggiungere i tuoi movies favoriti</h1>
+
+    <br>
     
-    <input class="form-control" type="text" placeholder="email" [(ngModel)]="authUser.email" id="email" name="email" readonly>
-    <input class="form-control" type="text" placeholder="username" [(ngModel)]="authUser.username" id="username" name="username">
-    <input class="form-control" type="text" placeholder="password" [(ngModel)]="authUser.password" id="password" name="password" readonly>
-    <input class="form-control" type="text" placeholder="telefono" [(ngModel)]="authUser.telefono" id="telefono" name="telefono">
-
+    <form class="">
+        
+        <input class="form-control" type="text" placeholder="email" [(ngModel)]="authUser.email" id="email" name="email" >
+        <input class="form-control" type="text" placeholder="username" [(ngModel)]="authUser.username" id="username" name="username">
+        <input class="form-control" type="text" placeholder="password" [(ngModel)]="authUser.password" id="password" name="password" >
+        <input class="form-control" type="text" placeholder="telefono" [(ngModel)]="authUser.telefono" id="telefono" name="telefono">
     
-    <button class="btn btn-danger" (click)="register()">Register</button>
+        <br>
+        <button class="btn btn-danger" (click)="register()">Register & create Profile</button>
+    
+    </form>
+    
+    
 
-</form>
-
-
+</div>  
