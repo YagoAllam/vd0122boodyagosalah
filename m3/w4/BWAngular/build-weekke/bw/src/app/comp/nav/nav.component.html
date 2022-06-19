@@ -1,0 +1,23 @@
+<div class="m-4">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-gradient">
+        <div class="container-fluid">
+            <a [routerLink]="['/home-post']" class="navbar-brand rotate-scale-up"><i class="bi bi-robot"></i> <strong>Gruppo #3</strong>  </a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav">
+                    <a [routerLink]="['/home-post']" class="nav-item nav-link active rotate-scale-up">Home <i class="bi bi-signpost-split"></i></a>
+                    <a [routerLink]="['/new-post']" class="nav-item nav-link active rotate-scale-up">Crea nuovo <i class="bi bi-plus-circle-fill"></i></a>
+                </div>
+                <div class="navbar-nav ms-auto">
+                    <span *ngIf="user" class="nav-item nav-link active rotate-scale-up cors">  Bentornato <b> {{user.user.nome}}</b></span>
+                    <a [routerLink]="['/registra']" *ngIf="!user" class="nav-item nav-link active rotate-scale-up">Registrati <i class="bi bi-door-open-fill"></i></a>
+                    <a [routerLink]="['/login']" *ngIf="!user" class="nav-item nav-link active rotate-scale-up" >Login <i class="bi bi-door-open-fill"></i></a>
+                    
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+<!-- tabindex="-1" -->

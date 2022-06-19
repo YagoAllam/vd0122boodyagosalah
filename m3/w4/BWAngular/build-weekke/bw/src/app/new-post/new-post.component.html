@@ -1,0 +1,30 @@
+<div class="main container" >
+<div class="pyro">
+    <div class="before"></div>
+    
+    <div class="after"></div>
+    <h2 class="text-center m-5">
+    <span class="title-word title-word-1">Crea </span>
+    <span class="title-word title-word-2">un </span>
+    <span class="title-word title-word-3">nuovo </span>
+    <span class="title-word title-word-4">post!</span>
+</h2>
+
+
+<form (ngSubmit)="creaNuovo()"  [formGroup]="form">
+<div id="flex">
+<!-- <input class="form-control my-5" type="text" placeholder="title" name="title" [(ngModel)]="title" >
+<input class="form-control my-5" type="text" placeholder="body" name="body" [(ngModel)]="body"  > -->
+<input type="text" class="form-control my-5" formControlName="title">
+<input type="text" class="form-control my-5" formControlName="body">
+<button [disabled]="carico||form.invalid" class="btn btn-success bg" type="submit" ><span *ngIf="!carico"><span class="title-word title-word-1">Crea </span>
+  <span class="title-word title-word-2">un </span>
+  <span class="title-word title-word-3">nuovo </span>
+  <span class="title-word title-word-4">post!</span></span>
+  <span *ngIf="carico">Caricamento</span></button>
+</div>
+</form>
+  </div>
+</div>
+
+<div class="m-5"></div>

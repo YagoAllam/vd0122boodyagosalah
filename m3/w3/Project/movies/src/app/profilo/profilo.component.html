@@ -1,6 +1,9 @@
 <h1>username: </h1>
 <form>
-    <input class="form-control" type="text" placeholder="aggiungi movies ai tuoi preferiti" id="username" name="movie" [(ngModel)]="movieInput" >
+    <input autocomplete="off" list="movies" class="form-control" type="text" placeholder="aggiungi movies ai tuoi preferiti" id="username" name="movie" [(ngModel)]="movieInput" >
+    <datalist id="movies">
+      <option value="ciao">ciao</option>
+    </datalist>
     <br>
 
 

@@ -1,6 +1,21 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 import { Iuser } from './login/interface';
+import { tap } from 'rxjs/operators';
+
+export interface authData {
+
+  accessToken: string;
+  user: {
+    email: string;
+    id: number;
+    name: string;
+
+  }
+
+ 
+}
 
 @Injectable({
   providedIn: 'root'
@@ -10,9 +25,19 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   apiUrl:string = 'http://localhost:4201/login'
+  
+  private logInSubject = new BehaviorSubject<authData | null> (null) 
+  logInObs = this.logInSubject.asObservable()
 
   login(authUser:Iuser){
-    return this.http.post(this.apiUrl, authUser)
+    return this.http.post<authData | null>(this.apiUrl, authUser)
+    .pipe(tap( (data) => {
+      console.log(data)
+      this.logInSubject.next(data)
+
+    })
+
+    )
   }
 
   saveUser(token:string){

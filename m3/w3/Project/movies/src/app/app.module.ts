@@ -3,11 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HttpContext, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './auth.interceptor';
-import {MatToolbarModule} from '@angular/material/toolbar'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatAutocompleteModule} from '@angular/material/autocomplete'
+
+
 
 @NgModule({
   declarations: [
@@ -16,10 +19,12 @@ import {MatToolbarModule} from '@angular/material/toolbar'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
-    MatToolbarModule
+    BrowserAnimationsModule,
+    MatAutocompleteModule
+
+    
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS,

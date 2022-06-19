@@ -1,0 +1,30 @@
+<!-- <div id="flex" *ngIf="updatePosto">
+    <form [formGroup]="form"  #f (ngSubmit)="aggiornaPost()">
+       
+        <input class="form-control" type="text"  value="{{updatePosto.id}}" name="id" disabled >
+        <input class="form-control" id="title" type="text" formControlName="title" value="{{updatePosto.title}}" name="title" >
+        <input class="form-control" id="body" type="text" formControlName="body" value="{{updatePosto.body}}" name="body" >
+       
+        <div *ngIf="!loading"> <button class="btn btn-warning"  type="submit" >Invia Modifiche</button></div>
+        <div *ngIf="loading"> 
+            <button class="btn btn-warning"  type="submit" disabled>Invia Modifiche</button>
+        </div>
+    </form>
+</div> -->
+
+<div id="flex" *ngIf="updatePosto">
+    <form [formGroup]="form"  #f (ngSubmit)="aggiornaPost()">
+        <div class="indietro">
+        <a [routerLink]="['/home-post']">torna indieto</a>
+    </div>
+        <input class="form-control" type="text"  value="{{updatePosto!.id}}" name="id" disabled>
+        <input class="form-control" id="title" type="text" formControlName="title" value="{{updatePosto!.title}}" name="title" >
+        <input class="form-control" id="body" type="text" formControlName="body" value="{{updatePosto!.body}}" name="body" >
+
+        <div id="bottone"*ngIf="!loading"> 
+            <button class="btn btn-warning"  type="submit" >Invia </button>
+
+        </div>
+
+    </form>
+</div>

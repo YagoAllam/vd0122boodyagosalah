@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Blaka&family=Bungee&display=swap%27');
+
+
+
+#flex{
+    font-family: 'Bungee', cursive;
+    display: flex;
+    justify-content: space-evenly;
+    height: 100vh;
+    padding-top: 5vh;
+     border: 4px solid rgba(1,176,171,1);
+    background: rgb(3,89,106);
+    background: linear-gradient(88deg, rgba(3,89,106,1) 0%, rgba(1,176,171,1) 99%, rgba(10,186,186,1) 100%);
+}
+
+
+
+.btn-warning{
+ border-radius: 100%;
+
+}
+#bottone{
+    display:flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.indietro{
+    padding-bottom: 20px;
+}
+
+a{
+border: 1px solid rgb(255, 218, 7);
+text-decoration: none;
+text-align: center;
+color: black;
+background-color:rgb(255, 218, 7);
+border-radius:15px;
+}

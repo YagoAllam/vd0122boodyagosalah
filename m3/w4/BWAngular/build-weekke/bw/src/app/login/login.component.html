@@ -1,0 +1,29 @@
+<!-- <form action="">
+<input type="email" [(ngModel)]="authUser.email" name="email">
+<input type="password" [(ngModel)]="authUser.password" name="password">
+<button (click)="entra()">entra</button>
+</form>
+<div *ngIf="accedi">Devi accedere per proseguire</div>
+<div *ngIf="!accedi">Complimenti sei abilitato alla navigazione</div>
+ -->
+
+ <div class="container">
+    <form class="row g-3 needs-validation d-flex justify-content-center" novalidate>
+        <div class="col-md-6">
+            <label for="validationCustomUsername" class="form-label">Username</label>
+            <div class="input-group has-validation">
+                <span class="input-group-text" id="inputGroupPrepend">@</span>
+                <input type="email" [(ngModel)]="authUser.email" name="email" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required placeholder="email">
+                <input type="password" [(ngModel)]="authUser.password" name="password" placeholder="password" class="form-control">
+                <button (click)="entra()" class="form-control btn btn-success" type="submit">entra</button>
+                <div class="invalid-feedback">
+                    Please choose a username.
+                </div>
+            </div>
+        </div>
+    </form>
+        
+    <div *ngIf="!accedi" class="d-flex justify-content-center" >Complimenti sei abilitato alla navigazione</div>
+    </div>
+    <div *ngIf="accedi" class="d-flex justify-content-center" id="x">Devi accedere per proseguire</div>
+    <img src="https://sweetalert2.github.io/images/nyan-cat.gif" alt="">
