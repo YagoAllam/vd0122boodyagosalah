@@ -1,0 +1,70 @@
+{
+  "users": [
+    {
+      "email": "admin@admin.com",
+      "password": "$2a$10$TrwiEHsjM4obm7lVCvA5sOg5I8y1vgokFQxXDbYEgmVAVXXvLJ0ba",
+      "name": "admin",
+      "lastname": "admin",
+      "phone": "+989999",
+      "place": "Valencia",
+      "id": 1
+    },
+    {
+      "email": "okok@admin.com",
+      "password": "$2a$10$RWDPg54y78QH/7/6.OlMu.2VPASPuloCh7ud6g585hPPWOx37fck.",
+      "name": "okok",
+      "lastname": "ok",
+      "phone": "+39642328023",
+      "place": "Valencia",
+      "id": 2
+    },
+    {
+      "email": "adssin@admin.com",
+      "password": "$2a$10$UtmX0VokyoJLv5yQ/FQ51eLzjmngsaAGcAbr69PBeieCBELnJHPXm",
+      "name": "ssds",
+      "lastname": "dsds",
+      "phone": "dsdsd",
+      "place": "dsd",
+      "id": 3
+    },
+    {
+      "email": "admddin@adddmin.comdd",
+      "password": "$2a$10$CWi2oBoMOZsd1x4hzgwkj.PjTQYP1mlUwTBTIVm8bLjAheShTJeVO",
+      "name": "Ojala Cafe Boody Moh",
+      "lastname": "Rowland",
+      "phone": "642328023",
+      "place": "Valencia",
+      "id": 4
+    },
+    {
+      "email": "ok@ok.com",
+      "password": "$2a$10$YJrvC/8zxJMPPJ.Jzu.f7OL7reFgzb4LGetcZPb/jioC3CvVzxVba",
+      "name": "ok",
+      "lastname": "ok",
+      "phone": "6423280233e",
+      "place": "Valencia",
+      "id": 5
+    },
+    {
+      "email": "x.x@gmail.com",
+      "password": "$2a$10$N4nLNUmh3aTZrhao3ZfVwOu.qy4C31ajY1z.iHBrUmS0D4ohlPp2u",
+      "name": "xx",
+      "lastname": "xxx",
+      "phone": "642328023",
+      "place": "Valencia",
+      "id": 6
+    },
+    {
+      "email": "maca@maca.com",
+      "password": "$2a$10$lS.aoy4..Sh3wi01/WX87OUsn25Oe3EtuGdYagXjgKP3.4VUnn0q.",
+      "id": 7,
+      "name": "Macarena",
+      "lastname": "Dolz",
+      "phone": "83872772636",
+      "place": "Valencia"
+    }
+  ],
+  "offerplaces": [
+
+  ]
+}

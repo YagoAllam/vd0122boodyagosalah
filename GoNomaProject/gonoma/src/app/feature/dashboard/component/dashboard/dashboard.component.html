@@ -1,0 +1,38 @@
+
+
+<header class="py-3 mb-4 border-bottom">
+  <div class="container d-flex flex-wrap justify-content-center">
+    <div href="/" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-dark text-decoration-none">
+        
+    
+      <h3>Welcome Noma: <b> Admin</b></h3>
+      
+  
+  <button [routerLink]="['/offerPlace']" class="btn btnOffer">Offer your place</button>
+  <button (click)="slogga()" class="btn btn-danger">Logout</button>
+  
+
+    </div>
+    
+  </div>
+</header>
+
+
+
+
+
+
+
+<section class="container filterSearch">
+
+<app-dashboard-child 
+  [offers]="(offers | async) ?? []"
+  (triggerFilter)="viewOffers()"
+   ></app-dashboard-child>
+
+</section>
+      
+
+
+            
+

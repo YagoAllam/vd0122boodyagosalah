@@ -1,0 +1,145 @@
+<body>
+
+    
+    <main>
+      <div class="container py-4">
+        <header class="pb-3 mb-4 border-bottom d-flex">
+          <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+            <img src="../../../../../assets/imgCityInfo/18.png" width="40" height="40" >
+            <span class="fs-4">Information abuot <b>{{cityName}}</b></span>
+          </a>
+          <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container-fluid">
+              <div class="collapse navbar-collapse" id="navbarExample01">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item active">
+                    <a class="nav-link" aria-current="page" href="#">Internet Speed</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Living cost</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">popolation</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">more info</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </header>
+
+        <section class="container">
+          <div class="card">
+            <div class="row g-0">
+              <div class="col-sm-4">
+                  <img src="../../../../../assets/imgCityInfo/17.png" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-sm-8">
+                <div class="card-body ">
+                  <h1 class="display-5 fw-bold">Internet Information</h1>
+                  <p class="col-md-8 fs-4">Noma is telling you that in <b>{{cityName}}</b> you will have Internet access with this caractiristics:</p>
+                  <ul  class="list-group list-group-flush" >
+                      <li class="list-group-item" *ngFor="let carat of internetInfo">
+                          {{carat.name }}:  <i> <b> {{ carat.value }}</b></i>
+      
+                      </li>
+                  </ul>
+              
+                </div>      
+        
+              </div>
+            </div>
+          </div>
+        </section>
+        <hr>
+    
+
+    
+        <div class="row align-items-md-stretch">
+          <div class="col-md-6">
+            <div class="h-100 p-5 text-white costoDiv rounded-3">
+              <img src="../../../../../assets/imgCityInfo/LifeCost.svg" class="img-fluid rounded-start" alt="...">
+              <h2>Cost living </h2>
+              <p>Noma searched for you some items costs in <b>{{cityName}}</b></p>
+            <ul  class="list-group list-group-flush" >
+                <li class="list-group-item" *ngFor="let carat of costLeavingInfo">
+                    {{carat.name }}:  <i> <b> {{ carat.value }}$</b></i>
+
+                </li>
+            </ul>
+              
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="h-100 p-5 text-white costoDiv rounded-3">
+              <img src="../../../../../assets/imgCityInfo/16.png" class="img-fluid rounded-start" alt="...">
+              <h2>popolation</h2>
+              <p>Noma knows that the demografic information in <b>{{cityName}}</b> is: </p>
+              <ul  class="list-group list-group-flush" >
+                <li class="list-group-item" *ngFor="let carat of citySizeInfo">
+                    {{carat.name }}:  <i> <b> {{ carat.value }}</b></i>
+
+                </li>
+            </ul>
+            </div>
+          </div>
+
+          <section class="container">
+            <div class="card">
+              <div class="row g-0">
+                <div class="col-sm-4">
+                    <img src="../../../../../assets/imgCityInfo/17.png" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-sm-8">
+                  <div class="card-body ">
+                    <h1 class="display-5 fw-bold">Internet Information</h1>
+                    <p class="col-md-8 fs-4">Noma is telling you that in <b>{{cityName}}</b> you will have Internet access with this caractiristics:</p>
+                    <ul  class="list-group list-group-flush" >
+                        <li class="list-group-item" *ngFor="let carat of internetInfo">
+                            {{carat.name }}:  <i> <b> {{ carat.value }}</b></i>
+        
+                        </li>
+                    </ul>
+                
+                  </div>      
+          
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+          <div class="col-md-6">
+            <div class="h-100 p-5 bg-light border rounded-3">
+              <img src="../../../../../assets/imgCityInfo/TransConex.svg" class="img-fluid rounded-start" alt="...">
+              <h2>connectivity</h2>
+              <p>Noma can travel in  <b>{{cityName}}</b> with: </p>
+              <ul  class="list-group list-group-flush" >
+                <li class="list-group-item" *ngFor="let carat of cityTravelInfo">
+                    {{carat.name }}:  <i> <b> {{ carat.value }}</b></i>
+
+                </li>
+            </ul>
+            </div>
+          </div>
+          
+
+
+
+        </div>
+
+        
+
+        
+    
+        <footer class="pt-3 mt-4 text-muted border-top">
+          © 2022
+        </footer>
+      </div>
+    </main>
+    
+    
+
+    </body>

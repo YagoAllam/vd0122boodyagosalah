@@ -1,0 +1,26 @@
+<header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom " >
+  <div class="container d-flex flex-wrap justify-content-between navBar">
+   
+    <a [routerLink]="['/login']" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+      <img src="../../../../assets/LogoHeader/LogoNavBar.svg" width="40" height="40">
+
+    </a>
+
+    <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+      <li><a [routerLink]="['/']" class="nav-link px-2 link-dark">
+          <mat-icon>home</mat-icon>
+        </a></li>
+      <li><a [routerLink]="['/dashboard']" class="nav-link px-2 link-secondary">
+          <mat-icon>account_circle</mat-icon>
+        </a></li>
+
+    </ul>
+
+    <div class="col-md-3 text-end">
+      <button *ngIf="!userLoged" type="button" [routerLink]="['/login']" class="btn btn-outline-dark me-2">Login</button>
+      <button *ngIf="!userLoged" type="button" [routerLink]="['/signup']" class="btn btn-dark">Sign-up</button>
+    </div>
+    
+  </div>
+</header>
+

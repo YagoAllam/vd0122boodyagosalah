@@ -1,0 +1,47 @@
+
+    
+    
+      <div class="container py-4">
+        <header class="pb-3 mb-4 border-bottom d-flex">
+          <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+            <img src="../../../../../assets/imgCityInfo/18.png" width="40" height="40" >
+            <span class="fs-4">My places </span>
+          </a>
+
+        </header>
+
+        <section id="filterOffers" class="container">
+  
+     
+            <div class=" row row-cols-1 row-cols-md-2 g-4">
+              <div *ngFor="let offer of myOffersArray" class="col ">
+                <div class="card">
+                  <img src="../../../../../assets/headerHomePhoto/imgHomeOffer/Noma (4).png" class="card-img-top" alt="...">
+                  {{offer.foto}}
+                  <div class="card-body">
+                    <h4 class="card-title"> <b>{{offer.title}} </b></h4>
+                    <h5 class="card-title"> Placed in <b> {{offer.city}}</b>.<br> available from {{offer.startDate}} to
+                      {{offer.endDate}} </h5>
+                      <p class="card-text"><b>description: </b> {{offer.characteristic}} </p>
+                      <p class="card-text"><b>extra service: </b> Gym/Swimming pool</p>
+                      <p class="card-text"><b>extra service: </b> cooking for you</p>
+                      <p class="card-text"><b>extra service: </b> Hd screen for Computer</p>
+                      <a class="btn btn-dark">delete my offer </a>
+                      <a class="btn btn-warning">modification </a>
+                     
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+
+        
+
+     
+        
+
+    
+    
+
+    

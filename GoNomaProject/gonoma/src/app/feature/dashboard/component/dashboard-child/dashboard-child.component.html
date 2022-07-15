@@ -1,0 +1,185 @@
+<section class="container">
+  <div class="card cardContainers">
+    <div class="row g-0">
+      <div class="col-sm-4">
+        <img src="../../../../assets/imgCards/GoNomad (7).png" class="h-100 card-img" alt="...">
+      </div>
+      <div class="col-sm-8">
+        <div class="card-body ">
+          <h2 >
+            Noma suggest you:
+
+          </h2>
+          <p class="card-text"> travelling with other Nomas can give you a lot of benefit: for example spend less 
+          </p>
+          <div class="extraService">
+  
+            <h2>If you don't know your destination, just click:</h2>
+            <div class="serchBtnDiv">
+              <button (click)="viewOffers()" class="serchBtn btn btn-primary">anywhere</button>
+            </div>
+            
+          </div>
+      
+        </div>      
+
+      </div>
+    </div>
+  </div>
+</section>
+<br>
+
+
+<form class=" example-form" [formGroup]="formSearchPlace">
+  
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>City</mat-label>
+        <input type="text" required="required"
+              formControlName="city"
+               placeholder="Pick one avalibale city"
+               aria-label="Number"
+               matInput
+               [formControl]="myControl"
+               [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+            {{option}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+  
+
+  
+
+
+      
+      <mat-form-field appearance="fill">
+        <mat-label><b>what dates are you travelling?</b></mat-label>
+        <mat-date-range-input [rangePicker]="picker">
+          <input matStartDate formControlName="startDate" placeholder="Start date" >
+          <input matEndDate formControlName="endDate" placeholder="End date">
+        </mat-date-range-input>
+        <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+        
+        <mat-error>Invalid start date</mat-error>
+        <mat-error>Invalid end date</mat-error>
+      </mat-form-field>
+
+
+
+    <mat-form-field appearance="fill">
+      <mat-label><b>
+          <mat-icon> local_hotel</mat-icon> Type of the place
+        </b></mat-label>
+        <select matNativeControl required formControlName="typeFlat">
+          <option value="entireFlat">Entire flat</option>
+          <option value="singleRoom">Single room</option>
+        <option value="mercedes">double room</option>
+      </select>
+    </mat-form-field>
+  
+  
+  <div class="priceFilter">
+    
+    <h4></h4>
+
+      
+      <mat-label required="required"><b>Max price I'd pay is: </b></mat-label>
+     
+      <mat-slider thumbLabel [displayWith]="formatLabel" formControlName="maxPrice" tickInterval="1000" step="100" min="200" max="3000"
+      aria-label="units">
+      </mat-slider>
+      
+
+    
+  </div>
+  
+  <div class="extraService">
+    
+   
+    <mat-label><b>Only places with extra amenities:</b></mat-label><br>
+    <mat-checkbox formControlName="screen" class="example-margin">Big screen hd</mat-checkbox>
+    <br>
+    
+
+    <mat-checkbox formControlName="gym" class="example-margin">Swimming pool or Gym</mat-checkbox><br>
+    
+    
+    <mat-checkbox formControlName="cooking" class="example-margin">Cooking service for Noma</mat-checkbox><br>
+    
+    
+  </div>
+
+  <br>
+
+  <div class="filterBtnDiv">
+    <button   (click)="viewOffersFilterd()" class="btn btn-secondary btnFilter">Show me filterd offers</button>
+  </div>
+
+  
+</form>
+
+
+<br><br>
+
+
+
+<!-- resultsOfSearch -->
+
+
+<section id="dashboardChildShowOffer" class="container">
+  
+  <h2 *ngIf="allOffer">All offers around the world:</h2>
+  <div class=" row row-cols-1 row-cols-md-2 g-4">
+    <div *ngFor="let offer of offers" class="col ">
+      <div class="cardContainer card">
+        <img loading="lazy" src="../../../../../assets/fotoProva.jpeg" class="card-img-top" alt="...">
+        {{offer.foto}}
+        <div class="card-body">
+          <h4 class="card-title"> <b>{{offer.title}} </b></h4>
+          <h5 class="card-title"> Placed in <b> {{offer.city}}</b>.<br> available from {{offer.startDate}} to
+            {{offer.endDate}} </h5>
+            <p class="card-text"><b>description: </b> {{offer.characteristic}} </p>
+            <span class="bi bi-whatsapp"></span> <a href="https://wa.me/{{offer.contact}}" target="_blank" rel="noopener"><i> contact host on WhatsApp</i></a> 
+          
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+
+
+  <section id="filterOffers" class="container">
+  
+    <h2 *ngIf="filteredResults">your filterd Results are:</h2>
+    <div class=" row row-cols-1 row-cols-md-2 g-4">
+      <div *ngFor="let offer of filterOffers ; let i = index" class="col ">
+        <div class="cardContainer card">
+          <img loading="lazy" src="../../../../../assets/headerHomePhoto/imgHomeOffer/Noma (4).png" class="card-img-top" alt="...">
+          {{offer.foto}}
+          <div class="card-body">
+            <h4 class="card-title"> <b>{{offer.title}} </b></h4>
+            <h5 class="card-title"> Placed in <b> {{offer.city}}</b>.<br> available from {{offer.startDate}} to
+              {{offer.endDate}} </h5>
+              <p class="card-text"><b>description: </b> {{offer.characteristic}} </p>
+              <p *ngIf="gym" class="card-text"><b>extra service: </b> Gym/Swimming pool</p>
+              <p *ngIf="cooking" class="card-text"><b>extra service: </b> cooking for you</p>
+              <p *ngIf="screen" class="card-text"><b>extra service: </b> Hd screen for Computer</p>
+              <a (click)=" mostra[i]=!mostra[i]" (click)="viewContact()"  class="btn btn-primary">contact host</a> 
+              <br>
+
+              <p *ngIf="mostra[i]"> the host contact is: <b>{{offer.contact}}</b>  </p>
+               <p *ngIf="mostra[i]"> or</p>
+              <a *ngIf="mostra[i]"  href="https://wa.me/{{offer.contact}}" target="_blank" rel="noopener">contact host on WhatsApp</a>
+            </div>
+        
+          </div>
+    
+        </div>
+      </div>
+    </section>
+

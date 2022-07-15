@@ -1,0 +1,177 @@
+
+<form (ngSubmit)="addPlace()"  [formGroup]="formOfferPlace">
+<section class="container">
+  <div class="card">
+    <div class="row g-0">
+      <div class="col-sm-4">
+        <img src="../../../../assets/GoNomad (5).png" class="h-100 card-img" alt="..."
+      style="object-fit: cover;">
+      </div>
+      <div class="col-sm-8">
+        <div class="card-body">
+          <h2 class="badge rounded-pill bg-dark">
+          Befor you must know that:
+          </h2>
+          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non eum corrupti amet assumenda esse deserunt ratione. Totam fugit, nemo ipsum eos, dolorem dolores voluptatem suscipit minima optio harum itaque nesciunt!
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt atque minus impedit porro laborum eius id, quo nostrum ipsam illo veniam autem molestiae labore aspernatur unde, qui ducimus aliquam similique.
+          </p>
+          <div class="extraService">
+  
+            <h2>Extra service for Noma:</h2>
+        
+            <mat-checkbox formControlName="screen" class="example-margin">Big screen hd</mat-checkbox>
+            <br>
+            
+        
+            <mat-checkbox formControlName="gym" class="example-margin">Swimming pool or Gym</mat-checkbox><br>
+            
+            
+            <mat-checkbox formControlName="cooking" class="example-margin">Cooking service for Noma</mat-checkbox><br>
+            <br>
+        
+          </div>
+      
+        </div>      
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="container">
+  <div class=" rowcenterDiv">
+      
+    
+    <div class="input">
+      
+      <div class="row">
+        
+            
+            <h2>Please complete all parts of the form & Offer your place for Noma</h2> 
+            
+        
+              <mat-form-field  appearance="fill">
+                <mat-label><b><mat-icon>public</mat-icon> what's your offer?</b></mat-label>
+                <input required="required"  matInput formControlName="title" placeholder="quite room in the center">
+              </mat-form-field>
+                
+              
+        
+              <mat-form-field appearance="fill">
+                <mat-label><b><mat-icon>room</mat-icon> In which city?</b></mat-label>
+                <input required="required" matInput formControlName="city"  placeholder="Valencia">
+              </mat-form-field>
+        
+                
+          
+              <mat-form-field appearance="fill">
+                <mat-label><b>  <mat-icon>euro</mat-icon> Price monthly?</b></mat-label>
+                <input required="required"  matInput formControlName="price">
+              </mat-form-field>
+                
+          
+                
+       
+          <div>
+            
+                  <input type="file" name="photos" formControlName="foto" > 
+                  <label> <i> Select the best photos of your place</i></label><mat-icon>add_a_photo</mat-icon><br> 
+            
+          </div>
+          <br>
+
+          <!-- <input type="text" formControlName="user" > -->
+              
+       
+          
+          
+                 <mat-form-field appearance="fill" >
+                    <mat-label><b><mat-icon> local_hotel</mat-icon> Type of the place</b></mat-label>
+                    <select matNativeControl required formControlName="typeFlat">
+                      <option value="entireFlat">Entire flat</option>
+                      <option value="singleRoom">Single room</option>
+                      <option value="mercedes">double room</option>
+                    </select>
+                  </mat-form-field>
+                
+      
+          
+                  <mat-form-field appearance="fill">
+                    <mat-label><b>Avalibale period</b></mat-label>
+                    <mat-date-range-input  [rangePicker]="picker">
+                      <input required="required"  matStartDate formControlName="startDate" placeholder="Start date">
+                      <input required="required"  matEndDate formControlName="endDate" placeholder="End date">
+                    </mat-date-range-input>
+                    <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-date-range-picker #picker></mat-date-range-picker>
+                  
+                    <mat-error >Invalid start date</mat-error>
+                    <mat-error >Invalid end date</mat-error>
+                  </mat-form-field>
+           
+                  <mat-form-field  appearance="fill">
+                    <mat-label><b><mat-icon>phone</mat-icon>  Phone or E-mail</b></mat-label>
+                    <input required="required"  matInput formControlName="contact">
+                  </mat-form-field>
+    
+                  <br>
+          
+                  <mat-form-field appearance="fill">
+                    <mat-label>
+                      <mat-icon>personal_video</mat-icon>
+                      <mat-icon>pool</mat-icon>
+                      <mat-icon>time_to_leave</mat-icon>  
+                      <mat-icon>people</mat-icon>
+                      <mat-icon>language</mat-icon>
+                       <b> characteristics of the place
+                       </b></mat-label>
+                    <textarea required="required"  matInput formControlName="characteristic"></textarea>
+                  </mat-form-field>
+         
+      
+          <!-- 
+          
+                  <mat-form-field appearance="fill">
+                    <mat-label>Enter a date range</mat-label>
+                    <mat-date-range-input [formGroup]="range" [rangePicker]="picker">
+                      <input matStartDate formControlName="start" placeholder="Start date">
+                      <input matEndDate formControlName="end" placeholder="End date">
+                    </mat-date-range-input>
+                    <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-date-range-picker #picker></mat-date-range-picker>
+                  
+                    <mat-error *ngIf="range.controls.start.hasError('matStartDateInvalid')">Invalid start date</mat-error>
+                    <mat-error *ngIf="range.controls.end.hasError('matEndDateInvalid')">Invalid end date</mat-error>
+                  </mat-form-field>
+                  
+                  <p>Selected range: {{range.value | json}}</p>
+          
+          
+                   -->
+      
+       
+                    <mat-checkbox indeterminate="true" checed="true"  class="example-margin"> <mat-icon>wifi</mat-icon>my wifi is at least fibra100</mat-checkbox>
+                 
+          
+                   <button class="btn btn-dark" (click)="addPlace()"> Pubblic my announcement </button>
+                   
+                   <br>
+                   <br>
+                  
+      </div> 
+    
+    </div>
+    
+      
+  </div>
+  
+
+  
+  </section>
+
+</form>

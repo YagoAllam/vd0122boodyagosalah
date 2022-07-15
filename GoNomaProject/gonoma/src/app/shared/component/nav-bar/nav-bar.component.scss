@@ -1,0 +1,22 @@
+header{
+  
+
+}
+.btn{
+    background-color: #ff914d;
+}
+
+@media screen and (max-width: 768px) {
+.navBar{
+    
+   display: flex;
+ 
+    justify-content: center !important; 
+
+}
+}
+
+button{
+    border-radius: 20px;
+    border: none;
+}

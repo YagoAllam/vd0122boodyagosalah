@@ -1,0 +1,114 @@
+
+<header class="py-3 mb-4 ">
+  <div class="container d-flex flex-wrap justify-content-center divHeader ">
+    <a [routerLink]="['/login']" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-dark text-decoration-none titleLine">
+   
+      <h2 class="fs-4">Go<span class="nomaWord">Noma</span> Experience</h2>
+      <h3 class="textAnimation"> Just login & join our service</h3>
+    </a>
+    
+
+  
+  </div>
+</header>
+
+
+<div class="container fotoHeader">
+  <div class="cotainer">
+    <img class="d-block w-100" src="../../../../../assets/headerHomePhoto/HeaderFoto.svg" >
+  </div>
+</div>
+<div class="container fotoHeaderSmartPhone">
+  <div class="cotainer">
+    <img class="d-block w-100" src="../../../../../assets/headerHomePhoto/HeaderFotoResponsive.svg">
+  </div>
+</div>
+
+
+<div class="container">
+  
+  <section class="sliderBg" >
+  
+    <div class="container titleOffer d-flex justify-content-center">
+    
+     <h1 class="typewriter-text">search a city which you need all Nomad Information</h1>
+  
+    </div>
+  
+    <form class="form-horizontal" >
+      <mat-form-field class=" example-full-width formCity" appearance="fill">
+        <mat-label>All Information abuot your destination</mat-label>
+        <input (input)="prova()" name="city" type="text" 
+              [(ngModel)]="city"
+               placeholder="city"
+               matInput
+               [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option  *ngFor="let option of  fullNameAllCitySearched" [value]="option.name" (click)="goToCityPage(option.id, option.name)">
+            {{option.name}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </form>
+  </section>
+
+</div>
+
+
+
+<br><br>
+
+
+
+
+<div class="container containercarousel ">
+
+  
+  <carousel [autoplay]="true" [overflowCellsLimit]=2 [images]="imgLink">
+    
+    <!-- mettere annunci scelti con alcuni parametri -->
+    
+  </carousel>
+
+</div>  
+
+<br><br>
+
+
+
+<div class="container containerDivider">
+  
+  <div class=" bgDivider divider py-1 "></div>
+
+</div>
+
+
+<section id="filterOffers" class="container">
+  
+ <div class="titleOffer textAnimation" ><h2>Home offers arround the word</h2></div>
+  <div class=" row row-cols-1 row-cols-md-2 g-4">
+    <div *ngFor="let offer of filterOffers" class="col ">
+      <div class="card cardContainer">
+        <img loading="lazy" src="../../../../../assets/headerHomePhoto/imgHomeOffer/Noma (4).png" class="card-img-top" alt="...">
+        {{offer.foto}}
+        <div class="card-body">
+          <h4 class="card-title"> <b>{{offer.title}} </b></h4>
+          <h5 class="card-title"> Placed in <b> {{offer.city}}</b>.<br> available from {{offer.startDate}} to
+            {{offer.endDate}} </h5>
+            <p class="card-text"><b>description: </b> {{offer.characteristic}} </p>
+            <p  class="card-text"><b>extra service: </b> Gym/Swimming pool</p>
+            <p class="card-text"><b>extra service: </b> cooking for you</p>
+            <p class="card-text"><b>extra service: </b> Hd screen for Computer</p>
+            <a (click)="loginBefor()" class="btn btn-primary">Host's contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<br><br>
+
+
+
+

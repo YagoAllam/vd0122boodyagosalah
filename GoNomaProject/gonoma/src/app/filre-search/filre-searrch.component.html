@@ -1,0 +1,36 @@
+<section class="container">
+    <h2>Filter Search</h2>
+    
+    <form class=" example-form">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>City</mat-label>
+          <input type="text"
+                 placeholder="Pick one"
+                 aria-label="Number"
+                 matInput
+               
+                 [matAutocomplete]="auto">
+          <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+            <mat-option *ngFor="let option of optionCitys| async" [value]="optionCitys">
+              {{option}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+
+
+
+
+        <div>
+
+        </div>
+
+
+
+
+
+
+      </form>
+
+
+
+</section>

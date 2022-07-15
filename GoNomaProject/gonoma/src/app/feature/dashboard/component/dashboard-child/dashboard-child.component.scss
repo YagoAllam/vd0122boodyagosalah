@@ -1,0 +1,67 @@
+form{
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+
+
+   
+   
+    
+    background-color: #ff914d;
+    
+}
+.cardContainers{
+
+    border-radius: 20px;
+    border: 0.5px solid #ff914d;
+
+}
+.cardContainers img{
+
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+}
+
+.serchBtn{
+    background-color: #545454 ;
+
+
+
+}
+:hover.serchBtn{
+    background-color:#2a2a2a;
+    
+  
+  }
+
+.serchBtnDiv{
+   
+
+}
+
+.btnFilter{
+    background-color: #000000;
+
+
+}
+
+.griz{
+    background-color: #545454 ;
+
+}
+
+button {
+    border-radius: 20px;
+  }
+  
+  .cardContainer{
+    border-radius: 25px;
+    border:1px solid #ff914d;
+   }
+   .cardContainer img{
+    border-top-left-radius:25px ;
+    border-top-right-radius:25px ;
+   }
+  
