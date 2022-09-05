@@ -1,24 +1,5 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "Post informativo",
-      "body": "Bravo ottimo post, complimenti, veramente ben argomentato, tanto di cappella",
-      "date": "5/5/2022 9:18"
-    },
-    {
-      "id": 2,
-      "title": "vamo al mar",
-      "body": "vamos al mar",
-      "date": "5/5/2022 10:12"
-    },
-    {
-      "id": 3,
-      "title": "grazie Flavio di tutto",
-      "body": "ti vogliamo bene",
-      "date": "5/5/2022 17:13"
-    }
-  ],
+  "posts": [],
   "users": [
     {
       "email": "cagnotto.f@gmail.com",
@@ -47,6 +28,13 @@
       "nome": "Classe",
       "cognome": "front end",
       "id": 13
+    },
+    {
+      "email": "admin@admin.com",
+      "password": "$2a$10$S7EDQhbkPfPB.wcuW2eSCuuAKqTCnllWQaTScycEFm4RsZmtLe5F6",
+      "nome": "Yago",
+      "cognome": "Allm",
+      "id": 14
     }
   ]
 }

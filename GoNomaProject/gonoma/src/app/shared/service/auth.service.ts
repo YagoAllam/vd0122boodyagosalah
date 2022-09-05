@@ -11,7 +11,7 @@ import { InterfaceNomad } from '../model/interface-nomad';
 })
 export class AuthService {
   
-  ApiUrlUser:string = 'http://localhost:4201/login'
+  ApiUrlUser:string = 'http://localhost:4201/'
   ApiUrlUsers:string = 'http://localhost:4201/users'
   jwtHelper = new JwtHelperService()
   autoLogoutTimer:any
@@ -81,7 +81,7 @@ export class AuthService {
   // }
 
   signup(data:InterfaceNomad) {
-    return this.http.post<AuthData>(this.ApiUrlUsers+"/register", data).pipe(
+    return this.http.post<AuthData>(this.ApiUrlUser+"register", data).pipe(
       tap((data)=>{
         console.log("Signup", data);
         localStorage.setItem("user", JSON.stringify(data));

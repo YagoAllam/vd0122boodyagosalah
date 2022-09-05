@@ -29,7 +29,9 @@ export class SignupComponent implements OnInit {
   register(){
     this.signupService.signup(this.authNomad).subscribe(res => {
    console.log(res);
-  })  
+  }) 
+  
+  this.router.navigate(['/login'])
   }
 
 }
